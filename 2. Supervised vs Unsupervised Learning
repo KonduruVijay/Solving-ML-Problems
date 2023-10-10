@@ -1,0 +1,9 @@
+While dealing with ML problems, there are generally two types of data:
+. Supervised data: always has one or multiple targets associated with it.
+. Unsupervised data: data does not have any target variable
+
+The columns are features and rows are called samples and supervised data has a target variable.
+If the target is categorical then the problem is defined as classification problem. If the target is real, then it is regression problem.
+It must be noted that sometimes we might use regression in a classification setting depending on the metric used for evaluation.
+
+Unsupervised problems has several approaches but the important one is clustering. Techniques like PCA, t-SNE are used.
