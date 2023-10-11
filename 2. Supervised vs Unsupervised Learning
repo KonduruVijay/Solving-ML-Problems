@@ -6,4 +6,24 @@ The columns are features and rows are called samples and supervised data has a t
 If the target is categorical then the problem is defined as classification problem. If the target is real, then it is regression problem.
 It must be noted that sometimes we might use regression in a classification setting depending on the metric used for evaluation.
 
-Unsupervised problems has several approaches but the important one is clustering. Techniques like PCA, t-SNE are used.
+Unsupervised problems has several approaches but the important one is clustering. Techniques like PCA, t-SNE are used. 
+
+.We can see how t-SNE is used for MNIST dataset.
+1) importing all the required libraries
+2) Getting  dataset
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from sklearn import datasets
+from sklearn import manifold
+%matplotlib inline
+
+data = datasets.fetch_openml(
+                    'mnist_784',
+                    version=1,
+                    return_X_y=True
+)
+pixel_values, targets = data
+targets = targets.astype(int)
